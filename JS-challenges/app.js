@@ -5,28 +5,29 @@
 /!//////////////TODO
 
 // !reverse method
- 
+ /*
 function reverseString(str) {
    return str
    .split('')
     .reverse()
    .join('');
 }
+*/
 
 
 
 
 ////////////////////////////////////
-// String.prototype.reverse = function() {
-//     return this.split('').reverse().join('');
-// };
-// function rev() {
-//     var inputText = document.getElementById('box');
-//     var inputarr = inputText.value.reverse();
-//    var reversed = document.querySelector('p');
-//     reversed.textContent = inputarr;
+String.prototype.reverse = function() {
+    return this.split('').reverse().join('');
+};
+function rev() {
+    var inputText = document.getElementById('box');
+    var inputarr = inputText.value.reverse();
+   var reversed = document.querySelector('p');
+    reversed.textContent = inputarr;
 
-// }
+}
 
 
 
