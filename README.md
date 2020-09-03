@@ -1,2 +1,2 @@
 # Algorithmic-Challenges
-JavaScript challenges and solution with DOM
+JavaScript challenges and solution with DOM ;)
