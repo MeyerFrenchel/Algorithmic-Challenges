@@ -12,12 +12,36 @@ function reverseString(str) {
     .reverse()
    .join('');
 }
+
+let revString = '';
+for(let i = str.length -1; i >= 0; i--) {
+    revString = revString + str[i];
+}
+*/
+////////////////////////////
+// ! ES6 forEach
+/*
+function reverseString(str) {
+let revString = '';
+str.split('').forEach(char => revString = char + revString);
+return revString ; 
+}
+
+console.log(reverseString(prompt('Enter a word so I can reverse it')));
+
+//////////////////////////////
+ ! reduce
+function reverseString(str) {
+    return str.split('').reduce((revString, char) =>
+      char + revString, '');
+
+}
+console.log(reverseString(prompt('Enter a word so I can reverse it')));
 */
 
-
-
-
 ////////////////////////////////////
+//! DOM HTML user input revers
+
 String.prototype.reverse = function() {
     return this.split('').reverse().join('');
 };
