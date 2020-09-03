@@ -1,0 +1,10 @@
+#box {
+    color: salmon;
+    width: 480px;
+    height: 40px;
+    font-size: 25px;
+}
+p {
+    color: thistle;
+    font-size: 28px;
+}
