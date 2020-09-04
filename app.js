@@ -74,7 +74,7 @@ isPalindrome('racecar');
 
 
 
-function verify(str) {
+function verify() {
     var inputText1 = document.querySelector('.two');
     var inputarr1 = inputText1.value.split('').reverse().join('');
    var trueOrFalse = document.querySelector('.palindrome');
@@ -103,25 +103,82 @@ console.log(capitalizeLeters('i loVe javAscrIpt'));
  /////////////////////////////////////////
 //! Es6
 
-function capitalizeLeters(str) {
+function capitalizeLetters(str) {
     return str
-    .lowerCase()
+    .toLowerCase()
     .split(' ')
-    .map(word => 
-       word[0].toUpperCase() + word.substr(1))
+    .map(word => word[0].toUpperCase() + word.substr(1))
     
     .join(' ');
 }
 
 
+
 ////////////////////////////////////////////////
 
-function capital(str) {
+function capital() {
+    
     var inputText2 = document.querySelector('.three');
-    var inputarr2 = captalizeLetters(inputText2.value)
-   var capLetter = document.querySelector('.capital-letter');
-   capLetter.textContent = inputarr2;
+    var inputarr2 = capitalizeLetters(inputText2.value);
+    
+   var capLetter = document.querySelector('.capital-leter');
+     if(capLetter) {
+        capLetter.textContent = inputarr2;
+     }
+   
 }
+
+////////////////////////////////////////////////////////////
+//? CHALLENGE 5: MAX CHARACTER
+//* Return the character that is mmost common in a string
+
+function maxCharacter(str) {
+    const charMap = {};
+    let maxNum = 0;
+    let maxChar = '';
+
+    str.split('').forEach(function(char){
+        if(charMap[char]) {
+            charMap[char]++;
+        } else {
+            charMap[char] = 1;
+        }
+    });
+    for(let char in charMap) {
+       if(charMap[char] > maxNum) {
+           maxNum = charMap[char];
+           maxChar = char;
+       }
+    }
+    return  maxChar;
+}
+function max() {
+    
+    var inputText3 = document.querySelector('.four');
+    var inputarr3 = maxCharacter(inputText3.value);
+    
+   var maxCh = document.querySelector('.max-char');
+     if(maxCh) {
+        maxCh.textContent = 'The most frequent letter is: '+ inputarr3;
+     }
+   
+}
+////////////////////////////////////////////////////
+/////////////////////////////////////////////////////
+//? CHALLENGE 6 : FIZZBUZZ
+// * Write a program that prints all the numbers from 1 to 100. For multiples of 3, instead of the number , print  
+//! Fizz
+//* , for multiples of 5 print
+//! Buzz
+//* For numbers which are multiples of both 3 and 5, print
+//! FIZZBUZZ
+
+function fizzBuzz() { 
+    for(let i = 1; i <= 100; i++) {
+     console.log(i);
+    }
+}
+fizzBuzz();
 
 
 
