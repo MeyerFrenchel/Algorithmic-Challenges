@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Learn Javascript</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,11 +11,34 @@
         JavaScript Cardio[session1]
     </h1>
     <h2>REVERSALS FIZZBUZZ MAXCHAR</h2>
+   
+    <div class="container">
+        <h3>Reverse a string</h3>
+      <input class="box" type="text" placeholder="Enter here a Word so we can reverse it :d">
+      <p>Reversed word is : </p>
+      <br>
+      <button onclick="rev()">Enter</button>
+    </div>
 
-    <input id="box" type="text" placeholder="Enter here a Word so we can reverse it :d">
-    <p>Reversed word is : </p>
-    <br>
-    <button onclick="rev()">Enter</button>
+     <br>
+
+     <div class="container">
+         <h3>Palindrome check</h3>
+        <input class="box two" type="text" placeholder="Enter here a Word so we can check it">
+        <p class="palindrome">Is it a palindrome? : </p>
+        <br>
+        <button onclick="verify()">Enter</button>
+     </div>
+
+     <div class="container">
+        <h3>Capitalize letters</h3>
+       <input class="box three" type="text" placeholder="Enter here a Word so we can check it">
+       <p class="capital-leter">Capitalized word: </p>
+       <br>
+       <button onclick="capital()">Enter</button>
+    </div>
+    
+
     <script src="app.js"></script>
 </body>
 </html>

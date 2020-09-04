@@ -46,11 +46,81 @@ String.prototype.reverse = function() {
     return this.split('').reverse().join('');
 };
 function rev() {
-    var inputText = document.getElementById('box');
+    var inputText = document.querySelector('.box');
     var inputarr = inputText.value.reverse();
    var reversed = document.querySelector('p');
     reversed.textContent = inputarr;
 
+}
+//alert(reverseString(prompt('Enter a word, so we can revese it :d')));
+
+///////////////////////////////////////////////////////
+//? CHALLENGE 2 : VALIDATE A PALINDROME
+//* Return true if palindrome and false if not
+// ex. isPalindrome('racecar') === 'true', isPlindrome
+// ('hello') === false
+
+/*
+function isPalindrome(str) {
+     if(str.split('').reverse().join('') === str) {
+         console.log (true);
+     } else {
+         console.log (false);
+     }
+}
+isPalindrome('racecar');
+*/
+
+
+
+
+function verify(str) {
+    var inputText1 = document.querySelector('.two');
+    var inputarr1 = inputText1.value.split('').reverse().join('');
+   var trueOrFalse = document.querySelector('.palindrome');
+   trueOrFalse.textContent = (inputarr1 === inputText1.value);
+}
+
+//? CHALLENGE 4 : CAPITALIZE LETTERS
+//* Return a string with the first letter of every word capitalized
+
+/*
+function capitalizeLeters(str) {
+    const strArr = str.toLowerCase().split(' ');
+
+    for(i = 0; i < strArr.length; i++) {
+        strArr[i] = strArr[i].substring(0,1).toUpperCase() +
+        strArr[i].substring(1);
+    }
+    return strArr.join(' ');
+
+}
+
+console.log(capitalizeLeters('i loVe javAscrIpt'));
+ */
+
+
+ /////////////////////////////////////////
+//! Es6
+
+function capitalizeLeters(str) {
+    return str
+    .lowerCase()
+    .split(' ')
+    .map(word => 
+       word[0].toUpperCase() + word.substr(1))
+    
+    .join(' ');
+}
+
+
+////////////////////////////////////////////////
+
+function capital(str) {
+    var inputText2 = document.querySelector('.three');
+    var inputarr2 = captalizeLetters(inputText2.value)
+   var capLetter = document.querySelector('.capital-letter');
+   capLetter.textContent = inputarr2;
 }
 
 
@@ -61,4 +131,41 @@ function rev() {
 
 
 
-//alert(reverseString(prompt('Enter a word, so we can revese it :d')));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
