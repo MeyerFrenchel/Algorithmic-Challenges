@@ -130,7 +130,7 @@ function capital() {
 
 ////////////////////////////////////////////////////////////
 //? CHALLENGE 5: MAX CHARACTER
-//* Return the character that is mmost common in a string
+//* Return the character that is most common in a string
 
 function maxCharacter(str) {
     const charMap = {};
@@ -150,7 +150,7 @@ function maxCharacter(str) {
            maxChar = char;
        }
     }
-    return  maxChar;
+    return [maxChar, maxNum + ' times'] ;
 }
 function max() {
     
@@ -175,24 +175,55 @@ function max() {
 
 function fizzBuzz() { 
     for(let i = 1; i <= 100; i++) {
-     console.log(i);
+        if(i % 3 == 0 && i % 5 == 0) {
+            console.log('FizzBuzz');
+        } else if (i % 3 == 0 && i % 5 !== 0) {
+            console.log('Fizz')
+        } else if(i % 3 !== 0 && i % 5 == 0) {
+            console.log('Buzz')
+        }else {
+            console.log(i);
+        }
+     
     }
 }
-fizzBuzz();
+//fizzBuzz();
 
 
+/////////////////////////////////////////////////////
+// ? CHALLENGE 7 LONGEST WORD
+//* Return the longest word a string
+//* IF more than one longest word pt in an array
 
 
+function longestWord(sen) {
+   //create filtered array
+    const wordArr = sen.toLowerCase().match(/[a-z0-9]+/g);
+   // sort by length 
+   const sorted = wordArr.sort(function(a,b) {
+       return b.length - a.length;
+   });
+
+   //If multiple wors, put in array
+   const longWordArr = sorted.filter(function(word){
+    return word.length === sorted[0].length;
+   });
+
+   return (longWordArr)
+}
 
 
-
-
-
-
-
-
-
-
+function longWo() {
+    
+    var inputText4 = document.querySelector('.five');
+    var inputarr4 = longestWord(inputText4.value);
+    
+   var longest = document.querySelector('.long-word');
+     if(longest) {
+        longest.textContent = 'The longest word is : '+ inputarr4;
+     }
+   
+}
 
 
 
